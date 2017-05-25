@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+    <title>Forms</title>
+  </head>
+
+  <body>
+    <form class="pizzaorder" method="post" action="something.php" name="myForm" onsubmit="return validateForm()">
+    <label>Name</label>
+      <input type="text" name="txtname" placeholder="Name" required>
+      <label>Phone</label>
+      <input type="text" name="txtnumber" placeholder="Phone Number" required>
+      <br>Toppings: <input type="checkbox" name="ckcheese"> Extra cheese
+      <input type="checkbox" name="ckmushroom"> Mashrooms
+      <br> Size: <input type="radio" name="rdsize" value="small"> small
+      <input type="radio" name="rdsize" value="medium"> Medium
+      <input type="radio" name="rdsize" value="large"> Large
+      <input type="radio" name="rdsize" value="extra large"> Extra large
+      <br>
+      <input type="file" name="datafile">
+      <br> For Where: <select name="sllocation">
+                 <option>Take home
+                 <option>In store
+                 </select>
+      <br> Comments:
+      <br>
+      <textarea name="comments" cols=40 rows=8></textarea>
+      <br>
+      <input type="submit" value="Send Order">
+      <input type="reset" value="Clear Form">
+    </form>
+
+<!--
+    <script>
+      function validateForm() {
+        var name = document.forms["myForm"]["Name"];
+        if (Name == null || Name == "";) {
+          alert("Fill in your name please");
+          return false;
+        }
+        if (Name.length < 3) {
+          alert("Name must be at least 3 characters");
+          return false;
+        }
+      }
+    </script>
+    -->
+  </body>
+
+</html>
